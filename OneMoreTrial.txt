@@ -2,4 +2,4 @@ Sergejs Ponomarenko
 
 nightfallholdings@inbox.lv
 
-Extra line added to test the functionality of Git's editor :)
+ХУЦПА И ГЕВАЛТ! (Extra line added to test the functionality of Git's editor + Cyrillic fonts :)
