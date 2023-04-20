@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+#red{
+    background-color: red;
+    top: 200px;
+    left: 200px;
+}
+#green{
+    background-color: green;
+    z-index: 1;
+    top: 250px;
+    left: 250px;
+    transition-duration: 700ms;
+}
+#green:hover{
+    transform: scale (1.1) rotate(45deg);
+    top: 200px;
+    left: 200px;
+    height: 300px;
+    width: 300px;
+    rotate: 45deg;
+}
+#blue{
+    background-color: blue;
+    top: 300px;
+    left: 300px;
+}
