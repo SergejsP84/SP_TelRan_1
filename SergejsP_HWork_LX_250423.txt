@@ -1,0 +1,12 @@
+   0 mkdir -p /opt/test/SERGEJS
+   1 touch /opt/test/SERGEJS/test.txt
+   2 cat readme.txt > /opt/test/SERGEJS/test.txt
+   3 ps -ef | head -2 >> opt/test/SERGEJS/test.txt
+   4 ps -ef | head -2 >> /opt/test/SERGEJS/test.txt
+   5 mkdir -p /tmp/test/SERGEJS2
+   6 mv opt/test/SERGEJS/test.txt /tmp/test/SERGEJS2/new2.txt
+   7 mv /opt/test/SERGEJS/test.txt /tmp/test/SERGEJS2/new2.txt
+   8 vi /tmp/test/SERGEJS2/new2.txt
+   9 cat /tmp/test/SERGEJS2/new2.txt
+  10 history
+  11 history > SergejsP_HWork_LX_250423.txt
