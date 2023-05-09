@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    padding: auto;
+}
+body {
+    background-color: lightgrey
+}
+.wrap{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    height: 180px;
+    margin: 20px;
+    border: 1px solid darkgrey;
+    border-radius: 10%;
+    background-color: darkgrey;
+    padding: 15px;
+  }
+  .largerbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    height: 180px;
+    margin: 20px;
+    border: 1px solid darkgrey;
+    border-radius: 10%;
+    background-color: darkgrey;
+    padding: 15px;
+  }
+  .longbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 35%;
+    height: 800px;
+    margin: 20px;
+    border: 1px solid darkgrey;
+    border-radius: 10%;
+    background-color: darkgrey;
+    padding: 5px;
+  }
+  p {
+      font-size: normal;
+  }
+  .lefttext {
+    font-size: normal;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+  button {
+      background-color: royalblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 40px;
+
+      align-content: center;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: larger;
+  }
+button:hover {
+    cursor: pointer;
+}
+
+.outputField {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 10%;
+    background-color: white;
+    padding: 15px;
+  }
+
+.codeOutput {
+  width: 98%;
+  height: 98%;
+  border: 0px solid white;
+}
+.someone {
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+  background-color: black;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+.someone p {
+  margin-left: 3px;
+  color: white;
+}
