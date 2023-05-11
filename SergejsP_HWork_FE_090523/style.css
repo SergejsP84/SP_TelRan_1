@@ -103,6 +103,7 @@ button:hover {
   width: 98%;
   height: 98%;
   border: 0px solid white;
+  text-align: left;
 }
 .someone {
   width: auto;
