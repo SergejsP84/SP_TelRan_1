@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Домашнее задание к 27.06.2023, General Tech, Сергей Пономаренко</h1>
+    <section class="baseArea">
+      <section class="workArea">
+        <img src="./piggies.jpg" alt="" />
+        <h3>Задачи в песочнице и код их решения (SQL)</h3>
+        <table class="SQLTable">
+        <tr>
+                <th class="col4">Задача</th>
+                <th class="col5">Код решения</th>
+              </tr>
+              <tr>
+                <td class="col4">2. Вывести название и стоимость товаров от 20 до 200 EUR.</td>
+                <td class="col5">SELECT ProductName, Price FROM [Products]<br>
+                        WHERE Price >=20 AND Price<=200<br>
+                        ORDER BY Price ASC</td>
+              </tr>
+              <tr>
+                    <td class="col4">3. Вывести товары от поставщиков 2 и 4 в порядке убывания цены.</td>
+                    <td class="col5">SELECT * FROM [Products]<br>
+                            WHERE SupplierID='2' OR SupplierID='4'<br>
+                            ORDER BY Price DESC</td>
+                  </tr>
+                  <tr>
+                        <td class="col4">4. Вывести товары, добавив поле "ценасоскидкой" в 12.5%.</td>
+                        <td class="col5">SELECT
+                                ProductName,<br>
+                                ROUND(price* 0.875, 2) Цена_со_скидкой<br>
+                                FROM Products</td>
+                      </tr>
+                      <tr>
+                            <td class="col4">5. У поставщиков 3 и 5 изменить тел. номера на произвольные значения.</td>
+                            <td class="col5">UPDATE Suppliers<br>
+                                    SET Phone='+371 26099444'<br>
+                                    WHERE SupplierID=3 OR SupplierID=5</td>
+                          </tr>
+                        </table>
+      </section>
+      <section class="workArea">
+        <h3>Бизнес-процессы свинофермы по модели CRUD</h3>
+        <table>
+          <tr>
+            <th class="col1">№</th>
+            <th class="col2">Процесс</th>
+            <th class="col3">Тип процесса</th>
+          </tr>
+          <tr>
+            <td class="col1">1</td>
+            <td class="col2">Рождение поросёнка (создание записи о поросе)</td>
+            <td class="col3">Create</td>
+          </tr>
+          <tr>
+            <td class="col1">2</td>
+            <td class="col2">Чтение записи о поросёнке (порода, вес и т.д.)</td>
+            <td class="col3">Read</td>
+          </tr>
+          <tr>
+            <td class="col1">3</td>
+            <td class="col2">Увеличение параметра "вес" в записи о поросёнке</td>
+            <td class="col3">Update</td>
+          </tr>
+          <tr>
+            <td class="col1">4</td>
+            <td class="col2">Удаление порося из поросячей базы данных в связи со съедением</td>
+            <td class="col3">Delete</td>
+          </tr>
+          <tr>
+            <td class="col1">5</td>
+            <td class="col2">Создание записи о разведении (хряк и свиноматка, ожидаемая дата родов свиноматки)</td>
+            <td class="col3">Create</td>
+          </tr>
+          <tr>
+            <td class="col1">6</td>
+            <td class="col2">Чтение записей о разведении (например, для планирования улучшения породы)</td>
+            <td class="col3">Read</td>
+          </tr>
+          <tr>
+            <td class="col1">7</td>
+            <td class="col2">Обновление записи о состоянии здоровья свиноматки (сделанные прививки, лекарства)</td>
+            <td class="col3">Update</td>
+          </tr>
+          <tr>
+            <td class="col1">8</td>
+            <td class="col2">Удаление записи хряка из базы производителей</td>
+            <td class="col3">Delete</td>
+          </tr>
+          <tr>
+            <td class="col1">9</td>
+            <td class="col2">Создание записи хряка из предыдущего примера в категории "боровки" </td>
+            <td class="col3">Create</td>
+          </tr>
+          <tr>
+            <td class="col1">10</td>
+            <td class="col2">Чтение записей о продажах свинок (покупатели, объём партий, цены)</td>
+            <td class="col3">Read</td>
+          </tr>
+        </table>
+      </section>
+    </section>
+  </body>
+</html>

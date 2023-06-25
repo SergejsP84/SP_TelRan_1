@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+    padding: auto;
+  }
+  
+  h3 {
+    text-align: center;
+    padding: auto;
+    background-color: pink;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    margin-bottom: 15px;
+  }
+  
+  .baseArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 86%;
+    height: 80%;
+    background-color: none;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  
+  .workArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 45%;
+    height: 600px;
+    margin: 20px;
+    border: 1px solid pink;
+    border-radius: 10%;
+    background-color: pink;
+    padding: 15px;
+  }
+
+  table {
+      width: 90%;
+  }
+  table, th, td{
+    border: black;
+    border-style: solid;
+    border-collapse: collapse;
+    background-color: white;
+}
+.col1 {
+    width: 10%;
+    text-align: center;
+}
+.col2 {
+    padding: 3px;
+}
+.col3 {
+    width: 20%;
+    text-align: center;
+}
+.SQLTable{
+    font-size: smaller;
+    padding: 3px;
+}
+.col4 {
+    padding: 3px;
+}
+.col5 {
+    width: 65%;
+    text-align: left;
+    padding: 3px;
+}
