@@ -1,12 +1,12 @@
--- Задача 1. 
--- Вывести ко-во поставщиков не из UK и не из China
+-- Р—Р°РґР°С‡Р° 1. 
+-- Р’С‹РІРµСЃС‚Рё РєРѕ-РІРѕ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ РЅРµ РёР· UK Рё РЅРµ РёР· China
 SELECT
 Count(*) AS RelevantSuppliers
 FROM suppliers
 WHERE NOT Country IN ('UK', 'China')
-
--- Задача 2. 
--- Вывести среднюю/MAX/MIN стоимости и ко-во товаров из категорий 3 и 5
+  
+-- Р—Р°РґР°С‡Р° 2. 
+-- Р’С‹РІРµСЃС‚Рё СЃСЂРµРґРЅСЋСЋ/MAX/MIN СЃС‚РѕРёРјРѕСЃС‚Рё Рё РєРѕ-РІРѕ С‚РѕРІР°СЂРѕРІ РёР· РєР°С‚РµРіРѕСЂРёР№ 3 Рё 5
 
 SELECT
 Count(*) AS Number_of_Products,
@@ -16,16 +16,16 @@ MAX (Price) AS Maximum_Price
 FROM Products
 WHERE CategoryID IN (3, 5)
 
--- Задача 3. 
--- Вывести общую сумму проданных товаров
+-- Р—Р°РґР°С‡Р° 3. 
+-- Р’С‹РІРµСЃС‚Рё РѕР±С‰СѓСЋ СЃСѓРјРјСѓ РїСЂРѕРґР°РЅРЅС‹С… С‚РѕРІР°СЂРѕРІ
 
 SELECT
 SUM(Products.Price * Quantity) AS TotalSalesValue
 FROM [OrderDetails]
 JOIN Products on OrderDetails.ProductID=Products.ProductID
 
--- Задача 4. 
--- Вывести ко-во стран, которые поставляют напитки
+-- Р—Р°РґР°С‡Р° 4. 
+-- Р’С‹РІРµСЃС‚Рё РєРѕ-РІРѕ СЃС‚СЂР°РЅ, РєРѕС‚РѕСЂС‹Рµ РїРѕСЃС‚Р°РІР»СЏСЋС‚ РЅР°РїРёС‚РєРё
 
 SELECT 
 Count(DISTINCT Suppliers.Country)
@@ -34,11 +34,11 @@ JOIN Categories on Products.CategoryID=Categories.CategoryID
 JOIN Products on Suppliers.SupplierID=Products.SupplierID
 WHERE Categories.CategoryName='Beverages'
 
--- Задача 5. 
--- Вывести сумму, на которую было отправлено товаров клиентам в USA
+-- Р—Р°РґР°С‡Р° 5. 
+-- Р’С‹РІРµСЃС‚Рё СЃСѓРјРјСѓ, РЅР° РєРѕС‚РѕСЂСѓСЋ Р±С‹Р»Рѕ РѕС‚РїСЂР°РІР»РµРЅРѕ С‚РѕРІР°СЂРѕРІ РєР»РёРµРЅС‚Р°Рј РІ USA
 
 SELECT 
-ROUND(SUM(Products.price * OrderDetails.quantity))
+ROUND(SUM(Products.price * OrderDetails.quantity), 2)
 from Orders
 inner join OrderDetails on Orders.OrderID = OrderDetails.OrderID
 inner join Customers on Customers.CustomerID = Orders.CustomerID
