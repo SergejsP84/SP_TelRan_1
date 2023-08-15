@@ -1,0 +1,49 @@
+﻿
+-- 1. Завершить создание БД streaming.
+
+CREATE DATABASE IF NOT EXISTS streaming;
+
+USE streaming;
+
+CREATE TABLE Users (
+  UserID INT PRIMARY KEY AUTO_INCREMENT,
+  UserName VARCHAR(32),
+  Country VARCHAR(32),
+  IsBlocked BOOLEAN DEFAULT false,
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Authors (
+  AuthorID INT PRIMARY KEY AUTO_INCREMENT,
+  UserID INT,
+  AuthorName VARCHAR(32),
+  StreamCount INT,
+  FollowerCount INT,
+  FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Streams (
+  StreamID INT PRIMARY KEY AUTO_INCREMENT,
+  Title VARCHAR(128),
+  AuthorID INT,
+  IsComplete BOOLEAN DEFAULT true,
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID)
+);
+
+CREATE TABLE Reactions (
+  ReactionID INT PRIMARY KEY AUTO_INCREMENT,
+  Value VARCHAR(2),
+  AuthorID INT,
+  StreamID INT,
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (StreamID) REFERENCES Streams(StreamID)
+);
+CREATE TABLE Donations (
+  DonationID INT PRIMARY KEY AUTO_INCREMENT,
+  AuthorID INT,
+  StreamID INT,
+  Amount FLOAT,
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (StreamID) REFERENCES Streams(StreamID)
+);
