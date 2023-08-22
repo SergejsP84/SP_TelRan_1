@@ -44,9 +44,11 @@ HAVING COUNT(*) < 15;
 
 -- 5. Вывести товар, который находится на втором месте по ко-ву заказов
 
-SELECT COUNT(*) AS SecondPlace
+SELECT Products.ProductName,
+COUNT(*) AS SecondPlace
 FROM OrderDetails
 JOIN Products on Orderdetails.ProductID=Products.ProductID
 GROUP BY Products.ProductID
 ORDER BY SecondPlace DESC
 LIMIT 1 OFFSET 1;
+
